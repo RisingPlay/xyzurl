@@ -1,0 +1,21 @@
+<div class="myurl index">
+	<h2>All myurls</h2>
+
+	<%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new')%>
+
+	<table>
+		<tr class="header">
+			<th></th>
+			<th></th>
+		</tr>
+		<% @myurls.each do |myurl| %>
+		<tr>
+			<td><%= myurl.url %></td>
+			<td><%= myurl.key %></td>
+			<td><%= link_to("Delete",{:action => 'delete',:myurl_id => myurl.id})%></td>
+		</tr>
+		<% end %>
+	</table>
+
+</div>
+

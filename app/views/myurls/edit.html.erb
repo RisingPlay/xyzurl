@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<%= render(:partial => 'head')%> 
+	<body>
+		<%= render(:partial => 'fb_share')%>
+		<%= render(:partial => 'header')%> 
+
+		<div class="myurls new">
+
+			<%= form_for(:myurl, :url => {:action => 'create'}) do |f| %>
+			<div class="main">
+				<div class="container">
+					<form class="form">
+
+					<%= render(:partial => 'form',:locals => {:f => f})%>
+
+					<div class="row xurl">
+						<div class="col-xs-12 col-md-12 xurl">
+							<% if params[:available] %>
+								<div class="available">
+									http://xyzurl.com/<%= myurl.key%> is Available
+									<div class="form-buttons">
+										<%= submit_tag("Create This") %>
+									</div>
+								</div>
+							<% else %>
+								<div class="unavailable">
+									http://xyzurl.com/<%= myurl.key%> is unavailable Please try another.
+								</div>
+							<% end %>
+						</div>
+					</div>
+
+					</form>
+				</div>
+			</div>
+				
+			<% end %>
+		</div>
+
+	</body>
+</html>

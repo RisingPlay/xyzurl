@@ -1,0 +1,77 @@
+<hr/>
+<div class="container">
+	<div class="example row">
+		<div class="col-xs-12 col-md-8" >
+			<h2>Simple Example</h2>
+			<p>Convert this url into a simple one.</p>
+			<p class="lurl">http://www.amazon.in/Kindle-Paperwhite-Resolution-Display-Built-/dp/B00QJDOEAO/ref=sr_1_1?ie=UTF8&qid=1462953982&sr=8-1&keywords=kindle
+			</p>
+			<p>Like this using custom tag = kindle </p>
+			<p class="lurl"><a href="#">http://xyzurl.com/kindle</a></p>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<%= render(:partial => 'ads/ads_auto')%>
+		</div>
+	</div>
+</div>
+
+<hr/>
+
+<div class="container">
+	<div class="howthisworks row">
+		<div class="col-xs-12 col-md-8">
+			<h2>How this works!</h2>
+			<p>It's a simple redirection application, which stores your urls and tags. when you enter given short url like xyzurl.com/tag, then it redirects it to your stored url or page.</p>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<%= render(:partial => 'ads/ads_auto')%>
+		</div>
+	</div>
+</div>
+
+
+<div class="footer">
+	<div class="container">
+		<div class="row footbar-up">
+			<div class="feedback col-xs-12 col-md-6">
+				<h2>Send Us Feedback:</h2>
+				<form action="MAILTO:xyzurl.com@gmail.com" method="post" enctype="text/plain">
+				Name:<br>
+				<input class="name" type="text" name="name" placeholder="Name"><br>
+				E-mail:<br>
+				<input class="email" type="text" name="mail" placeholder="email"><br>
+				Comment:<br>
+				<textarea class="fdtext" type="text" name="comment" placeholder="feedback">
+				</textarea>
+				<br>
+				<input class="submit btn" type="submit" value="Send">
+				<input class="reset btn" type="reset" value="Reset">
+				</form>
+			</div>
+			<div class="col-xs-12 col-md-6 contacts">
+				<h2>Share It</h2>
+				<div class="social-icon">
+					<%= link_to(image_tag('facebook.png',:size => '40x40',:alt => "facebook"),'http://www.facebook.com/share.php?u=http://xyzurl.com&title=Xyzurl.com', :class => 'facebook',target: '_blank')%>
+					<%= link_to(image_tag('twitter.png',:size => '40x40',:alt => "twitter"),'http://twitter.com/home?status=xyzurl+http://xyzurl.com', :class => 'twitter',target: '_blank')%>
+					<%= link_to(image_tag('google-plus.png',:size => '40x40',:alt => "google-plus"), 'https://plus.google.com/share?url=http://xyzurl.com', :class => 'google-plus', target: '_blank')%>
+					<%= link_to(image_tag('linkedin.png',:size => '40x40',:alt => "linkedin"), 'http://www.linkedin.com/shareArticle?mini=true&url=http://xyzurl.com&title=xyzurl&source=xyzurl.com', :class => 'linkedin', target: '_blank')%>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="container">
+		<div class="row footbar-dawn">
+			<div class="col-xs-12 col-md-6">
+				<p>Copyright © 2016 Xyzurl, All rights reserved.</p>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="terms">
+					<p>T&C. It is a free service for everyone. Do no use it for spamming and illigal work.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr/>
+</div>

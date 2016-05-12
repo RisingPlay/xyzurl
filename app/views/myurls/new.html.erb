@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+	<%= render(:partial => 'head')%> 
+	<body>
+		<%= render(:partial => 'fb_share')%>
+		<%= render(:partial => 'header')%>
+		<%= render(:partial => 'ads/ads_topbar')%>
+
+		<% if !flash[:notice].blank? %>
+			<div class="container notice">
+				<%= flash[:notice]%>
+			</div>
+		<%end%>
+
+
+		<div class="myurls new">
+
+			<%= render(:partial => 'copyurl', :locals => {:createdurl => params[:createdurl]})%>
+
+			<%= form_for(:myurl, :url => {:action => 'create'}) do |f| %>
+			<div class="main">
+				<div class="container">
+					<form class="form">
+
+					<%= render(:partial => 'form',:locals => {:f => f})%>
+
+					</form>
+				</div>
+			</div>
+				
+			<% end %>
+		</div>
+
+		<%= render(:partial => 'body_text')%>
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+
+
+
+<div class="row">
+	<div class="col-xs-12 col-md-3 url_lebel">Enter Url</div>
+	<div class="col-xs-8 col-md-10 f-input">
+		<%= f.text_field(:url, :placeholder => "Paste your url")%>
+	</div>
+	<div class="col-xs-4 col-md-2">
+		<div class="form-buttons">
+			<%= submit_tag("Submit") %>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-12 url_lebel">Custom Tag
+	<span class="custom-tag">(for  http://xyzurl.com/tag)</span></div>
+	<div class="col-xs-8 col-md-10 f-input">
+		<%= f.text_field(:key, :placeholder => "Optional") %>
+	</div>
+<!--<div class="col-xs-4 col-md-2">
+		<div class="form-buttons">
+			<%= submit_tag("Check") %>
+		</div>
+	</div>
+	-->
+</div>

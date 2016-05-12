@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	 function copyToClipboard(elementId) {
+		  var aux = document.createElement("input");
+		  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+		  document.body.appendChild(aux);
+		  aux.select();
+		  document.execCommand("copy");
+		  document.body.removeChild(aux);
+		}
+</script>
+
+<% if !createdurl.nil? %>
+	<div class="createdurl container">
+		<h2>Url created successfully!  Thanks for using Xyzurl.com !</h2>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-12 xurl">
+				<p id="p1"><%= createdurl %></p>
+				<button onclick="copyToClipboard('p1')">Copy</button>
+				<%= link_to createdurl, :target => "_blank" do %>
+					<button>Preview</button>
+				<% end %> 
+			</div>
+		</div>
+
+	</div>
+<%end%>
